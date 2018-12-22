@@ -53,7 +53,7 @@ class Detail extends Component {
 	      			<TouchableOpacity
 			          style={styles.goBack}
 			          onPress={() => {this.play()}}>
-			          <Text style={styles.playIcon}>Play</Text>
+			          <Text style={styles.playIcon}>Click to Play</Text>
 							</TouchableOpacity>
 	      		</View>
 	      		<View style={styles.definitionView}>
@@ -147,6 +147,7 @@ const styles = StyleSheet.create({
 	playIcon: {
 		color: 'white',
 		fontSize: 18,
+		fontWeight: 'bold',
 		padding: 20
 	},
 	definitionView: {

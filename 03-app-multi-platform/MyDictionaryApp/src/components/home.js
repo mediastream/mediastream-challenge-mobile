@@ -67,10 +67,14 @@ class Home extends Component {
   	this.setState({isLoading: true})
   	DictionaryProvider.findTerms(this.state.text).then((e) => {
   		this.setState({isLoading: false})
-	  	console.log('term ', e.list[0])
-	  	this.props.navigation.navigate('Detail', {
-	  		data: e.list[0]
-	  	})
+  		console.log('term ', e.list[0])
+  		if (e.list[0]) {
+  			this.props.navigation.navigate('Detail', {
+		  		data: e.list[0]
+		  	})
+  		}	else {
+  			alert('No se encuentra la palabra en el diccionario')
+  		}	
 	  })	    
   }
 }
