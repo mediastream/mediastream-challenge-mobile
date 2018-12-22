@@ -21,9 +21,8 @@ const PlatformHeight = height
 class Detail extends Component {
 	constructor(props) {
 	  super(props);
-	
 	  this.state = {
-	  	word: 'Apple:'
+	  	data: this.props.navigation.state.params.data
 	  };
 	}
 
@@ -32,11 +31,14 @@ class Detail extends Component {
   render() {
     return (
       <View style={styles.content}>
-      	<ScrollView style={styles.container}>
+      	<ScrollView 
+      		style={styles.container}
+      		showsVerticalScrollIndicator={false}
+      		>
       		<Header/>
       		<View style={styles.bodyView}>
 	      		<View style={styles.wordView}>
-	      			<Text style={styles.wordText}>{this.state.word}</Text>      			
+	      			<Text style={styles.wordText}>{this.state.data.word}</Text>      			
 	      			<TouchableOpacity
 			          style={styles.goBack}
 			          onPress={() => {this.play()}}>
@@ -44,10 +46,11 @@ class Detail extends Component {
 							</TouchableOpacity>
 	      		</View>
 	      		<View style={styles.definitionView}>
-	      			<Text style={styles.definitionText}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</Text>
+	      			<Text style={styles.definitionText}>{this.state.data.definition}</Text>
 	      		</View>
 	      		<Image style={styles.imageView} source={{uri: "https://farm5.staticflickr.com/4843/32548582608_b328a8043f_m.jpg"}}/>
 	      	</View>
+	      	<View style={styles.buffer}></View>
       	</ScrollView>      	      	
       	<View style={styles.footerView}>
       		<TouchableOpacity
@@ -133,6 +136,9 @@ const styles = StyleSheet.create({
 		marginTop: 20,
 		width: '100%',
     height: PlatformWidth * 0.6
+	},
+	buffer: {
+		height: 80
 	}
 });
 

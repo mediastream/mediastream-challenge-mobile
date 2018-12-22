@@ -8,14 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		E5C7AB252199A55E00E20648 /* Dictionary.h in Headers */ = {isa = PBXBuildFile; fileRef = E5C7AB232199A55E00E20648 /* Dictionary.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FDDCD45921CE71EB003D52A1 /* dictionaryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDCD45821CE71EB003D52A1 /* dictionaryController.swift */; };
+		FD09E82121CEBE930008269E /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD09E82021CEBE930008269E /* API.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E5C7AB202199A55E00E20648 /* Dictionary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Dictionary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5C7AB232199A55E00E20648 /* Dictionary.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Dictionary.h; sourceTree = "<group>"; };
 		E5C7AB242199A55E00E20648 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FDDCD45821CE71EB003D52A1 /* dictionaryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dictionaryController.swift; sourceTree = "<group>"; };
+		FD09E82021CEBE930008269E /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,7 +50,7 @@
 			children = (
 				E5C7AB232199A55E00E20648 /* Dictionary.h */,
 				E5C7AB242199A55E00E20648 /* Info.plist */,
-				FDDCD45821CE71EB003D52A1 /* dictionaryController.swift */,
+				FD09E82021CEBE930008269E /* API.swift */,
 			);
 			path = Dictionary;
 			sourceTree = "<group>";
@@ -134,7 +134,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FDDCD45921CE71EB003D52A1 /* dictionaryController.swift in Sources */,
+				FD09E82121CEBE930008269E /* API.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -12,6 +12,9 @@ import {
 import Colors from '../config/colors'
 import Header from '../components/commons/header'
 
+import {NativeModules} from 'react-native';
+var DictionaryProvider = NativeModules.DictionaryProvider;
+
 var {height, width} = Dimensions.get('window')
 const PlatformWidth = width
 const PlatformHeight = height
@@ -51,7 +54,13 @@ class Home extends Component {
   }
 
   search() {
-  	this.props.navigation.navigate('Detail')
+  	DictionaryProvider.findTerms(this.state.text).then((e) => {
+	  	console.log(e.list[0])
+	  	this.props.navigation.navigate('Detail', {
+	  		data: e.list[0]
+	  	})
+	  })
+  	
   }
 }
 
