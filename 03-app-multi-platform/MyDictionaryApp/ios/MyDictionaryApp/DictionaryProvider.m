@@ -24,4 +24,14 @@ RCT_REMAP_METHOD(findTerms, terms:(NSString *)terms
   }];
 }
 
+RCT_REMAP_METHOD(findPhoto, filter:(NSString *)filter
+                 findEventsWithResolver:(RCTPromiseResolveBlock)resolve
+                 rejecter:(RCTPromiseRejectBlock)reject)
+{
+  API *api = [API alloc];
+  [api fetchPhotoFind:filter completion:^(NSObject * dic) {
+    resolve(dic);
+  }];
+}
+
 @end

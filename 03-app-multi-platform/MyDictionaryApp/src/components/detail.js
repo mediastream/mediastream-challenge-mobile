@@ -1,7 +1,6 @@
 'use strict';
 
 import React, { Component } from 'react';
-
 import {
   StyleSheet,
   View,
@@ -9,10 +8,13 @@ import {
   Dimensions,
   TouchableOpacity,
   Image,
-  ScrollView
+  ScrollView,
+  Share,
+  NativeModules
 } from 'react-native';
 import Colors from '../config/colors'
 import Header from '../components/commons/header'
+var DictionaryProvider = NativeModules.DictionaryProvider;
 
 var {height, width} = Dimensions.get('window')
 const PlatformWidth = width
@@ -22,11 +24,19 @@ class Detail extends Component {
 	constructor(props) {
 	  super(props);
 	  this.state = {
-	  	data: this.props.navigation.state.params.data
+	  	data: this.props.navigation.state.params.data,
+	  	photo: ''
 	  };
 	}
 
 	static navigationOptions = { header: null }
+
+	componentDidMount() {
+		DictionaryProvider.findPhoto(this.state.text).then((e) => {
+	  	console.log('photo ', e)
+	  	this.setState({photo: e.items[0].media.m})
+	  })
+	}
 
   render() {
     return (
@@ -48,7 +58,7 @@ class Detail extends Component {
 	      		<View style={styles.definitionView}>
 	      			<Text style={styles.definitionText}>{this.state.data.definition}</Text>
 	      		</View>
-	      		<Image style={styles.imageView} source={{uri: "https://farm5.staticflickr.com/4843/32548582608_b328a8043f_m.jpg"}}/>
+	      		<Image style={styles.imageView} source={{uri: this.state.photo}}/>
 	      	</View>
 	      	<View style={styles.buffer}></View>
       	</ScrollView>      	      	
@@ -73,7 +83,17 @@ class Detail extends Component {
   }
 
   share() {
-
+  	Share.share({
+	    message: this.state.data.definition,
+	    url: this.state.data.permalink,
+	    title: this.state.data.word
+	  }, {
+	    // Android only:
+	    dialogTitle: 'compartir',
+	    // iOS only:
+	    excludedActivityTypes: [
+	    ]
+	  })
   }
 }
 

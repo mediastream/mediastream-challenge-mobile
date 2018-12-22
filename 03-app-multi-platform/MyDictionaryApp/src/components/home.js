@@ -7,11 +7,11 @@ import {
   Text,
   Dimensions,
   TextInput,
-  TouchableOpacity
+  TouchableOpacity,
+  ActivityIndicator
 } from 'react-native';
 import Colors from '../config/colors'
 import Header from '../components/commons/header'
-
 import {NativeModules} from 'react-native';
 var DictionaryProvider = NativeModules.DictionaryProvider;
 
@@ -24,7 +24,8 @@ class Home extends Component {
 	  super(props);
 	
 	  this.state = {
-	  	text: ''
+	  	text: '',
+	  	isLoading: false
 	  };
 	}
 
@@ -32,35 +33,45 @@ class Home extends Component {
 
   render() {
     return (
-      <View style={styles.content}>
-      	<Header/>
-      	<View style={styles.container}>
-      		<View style={styles.inputView}>
-      			<Text style={styles.inputLabel}>Write a word</Text>
-      			<TextInput
-			        style={styles.textInput}
-			        onChangeText={(text) => this.setState({text})}
-			        value={this.state.text}
-			      />
-			      <TouchableOpacity
-		          style={styles.searchButton}
-		          onPress={() => {this.search()}}>
-		          <Text style={styles.searchText}>FIND</Text>
-						</TouchableOpacity>
-      		</View>
-      	</View>      	
+      <View style={styles.content}>      	
+      	{this.state.isLoading &&
+      		<View style={styles.indicatorView}>
+      			<ActivityIndicator size="large" color="#0000ff" />
+      		</View>      		
+      	}
+      	{!this.state.isLoading &&
+      		<View>
+      			<Header/>
+	      	<View style={styles.container}>
+	      		<View style={styles.inputView}>
+	      			<Text style={styles.inputLabel}>Write a word</Text>
+	      			<TextInput
+				        style={styles.textInput}
+				        onChangeText={(text) => this.setState({text})}
+				        value={this.state.text}
+				      />
+				      <TouchableOpacity
+			          style={styles.searchButton}
+			          onPress={() => {this.search()}}>
+			          <Text style={styles.searchText}>FIND</Text>
+							</TouchableOpacity>
+	      		</View>
+	      	</View> 
+      		</View>      		
+      	}      	     	
       </View>
     );
   }
 
   search() {
+  	this.setState({isLoading: true})
   	DictionaryProvider.findTerms(this.state.text).then((e) => {
-	  	console.log(e.list[0])
+  		this.setState({isLoading: false})
+	  	console.log('term ', e.list[0])
 	  	this.props.navigation.navigate('Detail', {
 	  		data: e.list[0]
 	  	})
-	  })
-  	
+	  })	    
   }
 }
 
@@ -111,6 +122,12 @@ const styles = StyleSheet.create({
 	searchText: {
 		color: 'white',
 		fontSize: 18
+	},
+	indicatorView: {
+		flex: 1,
+		alignItems: 'center',
+		justifyContent: 'center',
+		backgroundColor: Colors.background,
 	}
 });
 

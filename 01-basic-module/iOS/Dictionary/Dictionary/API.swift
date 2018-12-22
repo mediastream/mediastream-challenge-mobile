@@ -22,7 +22,7 @@ import UIKit
     }
     
     @objc public func fetchPhotoFind(_ terms: String, completion: @escaping (_ result: Any)->())  {
-        let url = NSURL(string: "https://api.flickr.com/services/feeds/photos_public.gne?tags=\(terms)&tagmode=any&format=json")
+        let url = NSURL(string: "https://api.flickr.com/services/feeds/photos_public.gne?tags=\(terms)&tagmode=any&format=json&nojsoncallback=1")
         
         fetch(url: url! as URL) { (data) in
             completion(data)
