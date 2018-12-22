@@ -4,11 +4,15 @@
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
-    "test": "jest"
+    "test": "jest",
+    "build:ios": "react-native bundle --entry-file='index.js' --bundle-output='./ios/main.jsbundle' --dev=false --platform='ios'"
   },
   "dependencies": {
     "react": "16.6.0-alpha.8af6728",
-    "react-native": "0.57.4"
+    "react-native": "0.57.7",
+    "react-native-gesture-handler": "^1.0.10",
+    "react-native-sound-player": "^0.6.0",
+    "react-navigation": "^2.18.3"
   },
   "devDependencies": {
     "babel-jest": "23.6.0",
