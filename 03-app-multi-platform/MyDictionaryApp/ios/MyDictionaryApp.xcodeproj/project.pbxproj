@@ -27,6 +27,7 @@
 		ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */; };
 		B46E5630AF484AD7B28FBB9C /* libRNGestureHandler.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2579678D2FAA4087847F2E1B /* libRNGestureHandler.a */; };
 		CC6D9E52B04CC38DC1EF1AC0 /* libPods-MyDictionaryApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C14FC34A3401229D2789F1FF /* libPods-MyDictionaryApp.a */; };
+		DC3358D341C541EC9857CF37 /* libRNSoundPlayer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 45B1B3C239144C19B2B940DB /* libRNSoundPlayer.a */; };
 		FD09E85B21CEC1A70008269E /* Dictionary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD09E85A21CEC17E0008269E /* Dictionary.framework */; };
 		FD09E85C21CEC1A70008269E /* Dictionary.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FD09E85A21CEC17E0008269E /* Dictionary.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FD56145E21CECF1D00BDFF85 /* DictionaryProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = FD56145D21CECF1D00BDFF85 /* DictionaryProvider.m */; };
@@ -313,6 +314,13 @@
 			remoteGlobalIDString = E5C7AB1F2199A55E00E20648;
 			remoteInfo = Dictionary;
 		};
+		FD5614BC21CEEA7B00BDFF85 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CD5815AAC5694714BEBD549B /* RNSoundPlayer.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 134814201AA4EA6300B7C361;
+			remoteInfo = RNSoundPlayer;
+		};
 		FDDCD49B21CE815A003D52A1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = B9A629CA0AC047F883FE89A7 /* RNGestureHandler.xcodeproj */;
@@ -358,6 +366,7 @@
 		146833FF1AC3E56700842450 /* React.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = React.xcodeproj; path = "../node_modules/react-native/React/React.xcodeproj"; sourceTree = "<group>"; };
 		2579678D2FAA4087847F2E1B /* libRNGestureHandler.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNGestureHandler.a; sourceTree = "<group>"; };
 		2D16E6891FA4F8E400B85C8A /* libReact.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libReact.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		45B1B3C239144C19B2B940DB /* libRNSoundPlayer.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNSoundPlayer.a; sourceTree = "<group>"; };
 		520C6FEBEF20E99DE90DBE16 /* Pods-MyDictionaryApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyDictionaryApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyDictionaryApp/Pods-MyDictionaryApp.release.xcconfig"; sourceTree = "<group>"; };
 		5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTAnimation.xcodeproj; path = "../node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj"; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
@@ -365,6 +374,7 @@
 		ADBDB91F1DFEBF0600ED6528 /* RCTBlob.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTBlob.xcodeproj; path = "../node_modules/react-native/Libraries/Blob/RCTBlob.xcodeproj"; sourceTree = "<group>"; };
 		B9A629CA0AC047F883FE89A7 /* RNGestureHandler.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNGestureHandler.xcodeproj; path = "../node_modules/react-native-gesture-handler/ios/RNGestureHandler.xcodeproj"; sourceTree = "<group>"; };
 		C14FC34A3401229D2789F1FF /* libPods-MyDictionaryApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MyDictionaryApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD5815AAC5694714BEBD549B /* RNSoundPlayer.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNSoundPlayer.xcodeproj; path = "../node_modules/react-native-sound-player/ios/RNSoundPlayer.xcodeproj"; sourceTree = "<group>"; };
 		D4AFE0EEB80451B12E3BF3E1 /* Pods-MyDictionaryApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyDictionaryApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyDictionaryApp/Pods-MyDictionaryApp.debug.xcconfig"; sourceTree = "<group>"; };
 		FD09E85521CEC17D0008269E /* Dictionary.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Dictionary.xcodeproj; path = "../../../01-basic-module/iOS/Dictionary/Dictionary.xcodeproj"; sourceTree = "<group>"; };
 		FD56145C21CECF1D00BDFF85 /* DictionaryProvider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DictionaryProvider.h; path = MyDictionaryApp/DictionaryProvider.h; sourceTree = "<group>"; };
@@ -399,6 +409,7 @@
 				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
 				B46E5630AF484AD7B28FBB9C /* libRNGestureHandler.a in Frameworks */,
 				CC6D9E52B04CC38DC1EF1AC0 /* libPods-MyDictionaryApp.a in Frameworks */,
+				DC3358D341C541EC9857CF37 /* libRNSoundPlayer.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -575,6 +586,7 @@
 				00C302DF1ABCB9EE00DB3ED1 /* RCTVibration.xcodeproj */,
 				139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */,
 				B9A629CA0AC047F883FE89A7 /* RNGestureHandler.xcodeproj */,
+				CD5815AAC5694714BEBD549B /* RNSoundPlayer.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -631,10 +643,19 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		FD5614B921CEEA7B00BDFF85 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FD5614BD21CEEA7B00BDFF85 /* libRNSoundPlayer.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		FDDCD47221CE8158003D52A1 /* Recovered References */ = {
 			isa = PBXGroup;
 			children = (
 				2579678D2FAA4087847F2E1B /* libRNGestureHandler.a */,
+				45B1B3C239144C19B2B940DB /* libRNSoundPlayer.a */,
 			);
 			name = "Recovered References";
 			sourceTree = "<group>";
@@ -771,6 +792,10 @@
 				{
 					ProductGroup = FDDCD49821CE815A003D52A1 /* Products */;
 					ProjectRef = B9A629CA0AC047F883FE89A7 /* RNGestureHandler.xcodeproj */;
+				},
+				{
+					ProductGroup = FD5614B921CEEA7B00BDFF85 /* Products */;
+					ProjectRef = CD5815AAC5694714BEBD549B /* RNSoundPlayer.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -1048,6 +1073,13 @@
 			remoteRef = FD09E85921CEC17E0008269E /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		FD5614BD21CEEA7B00BDFF85 /* libRNSoundPlayer.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRNSoundPlayer.a;
+			remoteRef = FD5614BC21CEEA7B00BDFF85 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		FDDCD49C21CE815A003D52A1 /* libRNGestureHandler.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
@@ -1169,12 +1201,14 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
+					"$(SRCROOT)/../node_modules/react-native-sound-player/ios",
 				);
 				INFOPLIST_FILE = MyDictionaryAppTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				OTHER_LDFLAGS = (
@@ -1195,12 +1229,14 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
+					"$(SRCROOT)/../node_modules/react-native-sound-player/ios",
 				);
 				INFOPLIST_FILE = MyDictionaryAppTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				OTHER_LDFLAGS = (
@@ -1224,6 +1260,7 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
+					"$(SRCROOT)/../node_modules/react-native-sound-player/ios",
 				);
 				INFOPLIST_FILE = MyDictionaryApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1248,6 +1285,7 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
+					"$(SRCROOT)/../node_modules/react-native-sound-player/ios",
 				);
 				INFOPLIST_FILE = MyDictionaryApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

@@ -14,6 +14,7 @@ import {
 } from 'react-native';
 import Colors from '../config/colors'
 import Header from '../components/commons/header'
+import SoundPlayer from 'react-native-sound-player'
 var DictionaryProvider = NativeModules.DictionaryProvider;
 
 var {height, width} = Dimensions.get('window')
@@ -79,7 +80,11 @@ class Detail extends Component {
   }
 
   play() {
-
+  	try {
+		    SoundPlayer.playUrl(this.state.data.sound_urls[0])
+		} catch (e) {
+		    console.log(`cannot play the sound file`, e)
+		}
   }
 
   share() {
