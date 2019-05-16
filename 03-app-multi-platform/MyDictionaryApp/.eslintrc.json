@@ -1,0 +1,42 @@
+{
+  "extends": "airbnb",
+  "env": {
+    "jest": true,
+    "react-native/react-native": true
+  },
+  "plugins": ["react", "react-native"],
+  "parser": "babel-eslint",
+  "rules": {
+    "react/jsx-filename-extension": [0],
+    "no-tabs": "off",
+    "indent": ["error", "tab", { "SwitchCase": 1 }],
+    "comma-dangle": ["error", "never"],
+    "import/prefer-default-export": "off",
+    "space-in-parens": ["error", "always"],
+    "array-bracket-spacing": ["error", "always"],
+    "no-underscore-dangle": "off",
+    "computed-property-spacing": ["error", "always"],
+    "quote-props": ["error", "consistent"],
+    "react/jsx-indent": [2, "tab"],
+    "react/jsx-indent-props": [2, "tab"],
+    "import/no-dynamic-require": 0,
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": true
+      }
+    ],
+    "prefer-const": "off",
+    "no-param-reassign": "off",
+    "import/no-named-as-default": "off",
+    "function-paren-newline": "off",
+    "global-require": "off",
+    "no-mixed-spaces-and-tabs": "off",
+    "jsx-a11y/anchor-is-valid": "off",
+    "react/prefer-stateless-function":"off",
+    "no-await-in-loop":"off",
+    "no-restricted-syntax":"off",
+    "consistent-return":"off",
+    "react/forbid-prop-types":"off"
+  }
+}
