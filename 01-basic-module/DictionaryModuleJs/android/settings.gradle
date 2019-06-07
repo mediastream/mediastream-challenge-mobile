@@ -1,0 +1,3 @@
+rootProject.name = 'DictionaryModuleJs'
+
+include ':app'
