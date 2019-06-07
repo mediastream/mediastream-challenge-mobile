@@ -11,7 +11,6 @@ import {TextInput, StyleSheet, Text, View, SafeAreaView, TouchableOpacity, Statu
 
 import { LinearGradient } from 'expo-linear-gradient';
 import { scale, verticalScale } from 'react-native-size-matters'
-import fetchJsonp from 'fetch-jsonp'
 
 type Props = {};
 export default class App extends Component<Props> {
