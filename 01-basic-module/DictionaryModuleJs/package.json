@@ -10,6 +10,7 @@
     "expo-linear-gradient": "^5.0.1",
     "react": "16.8.3",
     "react-native": "0.59.9",
+    "react-native-size-matters": "^0.2.1",
     "react-native-unimodules": "^0.4.0-alpha.3"
   },
   "devDependencies": {
