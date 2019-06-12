@@ -79,6 +79,14 @@ export const resultStyle = ScaledSheet.create( {
 	image: {
 		height: '200@ms',
 		width: '200@ms'
+	},
+	titleContainer: {
+		flexDirection: 'row',
+		justifyContent: 'space-between'
+	},
+	imagePlay: {
+		height: '30@ms',
+		width: '30@ms'
 	}
 
 } );

@@ -1,3 +1,4 @@
+/* eslint-disable class-methods-use-this,no-console */
 import React, { Component } from 'react';
 import {
 	View, FlatList, TouchableWithoutFeedback, Text, Image, Share
@@ -10,32 +11,64 @@ import Header from '../../components/header';
 import Result from './result';
 import { pop } from '../navigation';
 import Assets from '../../assets';
+import RnPlayer from '../../../lib/rnPlayer';
 
 class SearchResult extends Component {
 	constructor( props ) {
 		super( props );
+		this.state = { loading: false };
 		this._back = this._back.bind( this );
 		this._share = this._share.bind( this );
 	}
+
 
 	_back() {
     	const { componentId } = this.props;
     	pop( componentId );
 	}
 
+	async _share() {
+		await Share.share( {
+			message: 'No me dio tiempo :('
+		} );
+	}
+
+	_player( info ) {
+		if ( info.sound_urls.length > 0 ) {
+			const listener = RnPlayer.preparePlayer( info.sound_urls[ 0 ], ( data ) => {
+				this.setState( { loading: data.loading }, () => {
+					if ( !data.loading ) {
+						RnPlayer.play( ( ) => {
+							console.log( 'play' );
+						} );
+						listener.remove();
+					}
+				} );
+			} );
+		}
+	}
 
 	render() {
 		const { words } = this.props;
+		const { loading } = this.state;
 		return (
 			<LinearGradient colors={[ '#df2cf2', '#5718dc' ]} style={{ flex: 1 }}>
 				<View style={styles.container}>
 					<Header />
 					{words.length > 0 ? (
 						<FlatList
+							extraData={this.state}
 							data={words}
 							renderItem={( { item } ) => {
 								const { image, info } = item;
-								return <Result info={info} image={image} />;
+								return (
+									<Result
+										info={info}
+										image={image}
+										player={() => this._player( info )}
+										loading={loading}
+									/>
+								);
 							}}
 							keyExtractor={( item, index ) => index.toString()}
 						/>
@@ -54,12 +87,7 @@ class SearchResult extends Component {
 
 							</View>
 						</TouchableWithoutFeedback>
-						<TouchableWithoutFeedback onPress={async () => {
-							await Share.share( {
-								message: 'No me dio tiempo :('
-							} );
-						}}
-						>
+						<TouchableWithoutFeedback onPress={this._share}>
 							<View style={styles.shareContainer}>
 								<Image source={Assets.common.share} style={styles.backIcon} />
 								<Text style={styles.backText}>Share</Text>

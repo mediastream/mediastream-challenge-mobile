@@ -25,6 +25,7 @@
 		ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */; };
 		CE4304F7228E0A2D00259979 /* libBVLinearGradient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE4304F4228E0A1900259979 /* libBVLinearGradient.a */; };
 		CEA470DD228DB0D8004F7B17 /* libReactNativeNavigation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CEA470DA228DB0C5004F7B17 /* libReactNativeNavigation.a */; };
+		CEFBE63F22B001C10000AAE5 /* libRNAudioPlayer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CEFBE63E22B0015E0000AAE5 /* libRNAudioPlayer.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -315,6 +316,13 @@
 			remoteGlobalIDString = 7B49FEBB1E95090800DEB3EA;
 			remoteInfo = ReactNativeNavigationTests;
 		};
+		CEFBE63D22B0015E0000AAE5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CEFBE61022B0015E0000AAE5 /* RNAudioPlayer.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 134814201AA4EA6300B7C361;
+			remoteInfo = RNAudioPlayer;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -343,6 +351,7 @@
 		ADBDB91F1DFEBF0600ED6528 /* RCTBlob.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTBlob.xcodeproj; path = "../node_modules/react-native/Libraries/Blob/RCTBlob.xcodeproj"; sourceTree = "<group>"; };
 		CE4304EE228E0A1800259979 /* BVLinearGradient.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = BVLinearGradient.xcodeproj; path = "../node_modules/react-native-linear-gradient/BVLinearGradient.xcodeproj"; sourceTree = "<group>"; };
 		CEA470AF228DB0C5004F7B17 /* ReactNativeNavigation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ReactNativeNavigation.xcodeproj; path = "../node_modules/react-native-navigation/lib/ios/ReactNativeNavigation.xcodeproj"; sourceTree = "<group>"; };
+		CEFBE61022B0015E0000AAE5 /* RNAudioPlayer.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNAudioPlayer.xcodeproj; path = ../../../../../../Documents/Developments/experiments/AudioPlayer/ios/RNAudioPlayer.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -350,6 +359,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEFBE63F22B001C10000AAE5 /* libRNAudioPlayer.a in Frameworks */,
 				CE4304F7228E0A2D00259979 /* libBVLinearGradient.a in Frameworks */,
 				CEA470DD228DB0D8004F7B17 /* libReactNativeNavigation.a in Frameworks */,
 				ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */,
@@ -515,6 +525,7 @@
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				CEFBE61022B0015E0000AAE5 /* RNAudioPlayer.xcodeproj */,
 				CE4304EE228E0A1800259979 /* BVLinearGradient.xcodeproj */,
 				CEA470AF228DB0C5004F7B17 /* ReactNativeNavigation.xcodeproj */,
 				5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */,
@@ -587,6 +598,14 @@
 			children = (
 				CEA470DA228DB0C5004F7B17 /* libReactNativeNavigation.a */,
 				CEA470DC228DB0C5004F7B17 /* ReactNativeNavigationTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CEFBE61122B0015E0000AAE5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CEFBE63E22B0015E0000AAE5 /* libRNAudioPlayer.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -688,6 +707,10 @@
 				{
 					ProductGroup = CEA470B0228DB0C5004F7B17 /* Products */;
 					ProjectRef = CEA470AF228DB0C5004F7B17 /* ReactNativeNavigation.xcodeproj */;
+				},
+				{
+					ProductGroup = CEFBE61122B0015E0000AAE5 /* Products */;
+					ProjectRef = CEFBE61022B0015E0000AAE5 /* RNAudioPlayer.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -985,6 +1008,13 @@
 			remoteRef = CEA470DB228DB0C5004F7B17 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		CEFBE63E22B0015E0000AAE5 /* libRNAudioPlayer.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRNAudioPlayer.a;
+			remoteRef = CEFBE63D22B0015E0000AAE5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
@@ -1012,7 +1042,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
+			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -1044,12 +1074,14 @@
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = MyDictionaryApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME)";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -1064,11 +1096,13 @@
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = MyDictionaryApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME)";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",

@@ -14,6 +14,8 @@ import com.reactnativenavigation.react.ReactGateway;
 
 import com.BV.LinearGradient.LinearGradientPackage;
 
+import com.reactlibrary.RNAudioPlayerPackage;
+
 import java.util.Arrays;
 import java.util.List;
 
@@ -38,7 +40,8 @@ public class MainApplication extends NavigationApplication {
                  // Add additional packages you require here
                  // No need to add RnnPackage and MainReactPackage
                  return Arrays.<ReactPackage>asList(
-                       new LinearGradientPackage()
+                       new LinearGradientPackage(),
+                       new RNAudioPlayerPackage()
                  );
              }
 
