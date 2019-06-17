@@ -7,7 +7,7 @@ import { resultStyle } from './styles';
 import asstes from '../../assets';
 
 const Result = ( {
-	info, image, player, loading
+	info, image, player, loading, searching
 } ) => (
 	<View style={resultStyle.container}>
 		<View style={resultStyle.titleContainer}>
@@ -34,9 +34,18 @@ const Result = ( {
 		<View style={resultStyle.definitionContainer}>
 			<Text style={resultStyle.definitionText}>{info.definition}</Text>
 		</View>
-		<View style={resultStyle.imageContainer}>
-			<Image source={{ uri: image.media.m }} style={resultStyle.image} />
-		</View>
+		{searching ? (
+			<ActivityIndicator style={resultStyle.wordContainer} size="large" color="#ffffff" />
+		) : (
+			<View style={resultStyle.imageContainer}>
+				{image !== '' && typeof image !== 'undefined' ? (
+					<Image source={{ uri: image.media.m }} style={resultStyle.image} />
+				) : (
+					<View />
+				)}
+			</View>
+		)}
+
 	</View>
 );
 

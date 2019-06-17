@@ -1,12 +1,16 @@
-import { SEARCH, SEARCH_ERROR, SEARCH_SUCCESS } from '../actions/types';
+import {
+	SEARCH, SEARCH_ERROR, SEARCH_SUCCESS, SEARCH_IMAGE
+} from '../actions/types';
 import CreateReducer from '../redux/createReducer';
 
 const init = {
 	searching: false,
 	payload: {
-	    info: [],
-		image: []
-	}
+	    definition: '',
+		sound: '',
+		word: ''
+	},
+	imageUrl: ''
 };
 
 export const words = CreateReducer( init, {
@@ -18,5 +22,8 @@ export const words = CreateReducer( init, {
 	},
 	[ SEARCH_SUCCESS ]( state, action ) {
 		return { ...state, searching: false, payload: action.payload };
+	},
+	[ SEARCH_IMAGE ]( state, action ) {
+		return { ...state, searching: false, imageUrl: action.payload };
 	}
 } );

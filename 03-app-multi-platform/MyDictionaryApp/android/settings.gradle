@@ -10,3 +10,9 @@ project(':react-native-linear-gradient').projectDir = new File(rootProject.proje
 
 include ':audio-player'
 project(':audio-player').projectDir = new File(rootProject.projectDir, '../lib/audio-player/android')
+
+include ':DictionaryBridge'
+project(':DictionaryBridge').projectDir = new File(rootProject.projectDir,'../../../DictionaryBridge/android')
+
+include ':dictionary'
+project(':dictionary').projectDir = new File(rootProject.projectDir,'../../../01-basic-module/android/dictionary')

@@ -18,7 +18,8 @@ Navigation.events().registerAppLaunchedListener( () => {
 						name: 'Search',
 						options: {
 							topBar: {
-								visible: false
+								visible: false,
+								height: 0
 							}
 						}
 					}

@@ -1,7 +1,7 @@
 /* eslint-disable class-methods-use-this,no-console */
 import React, { Component } from 'react';
 import {
-	View, FlatList, TouchableWithoutFeedback, Text, Image, Share
+	View, ScrollView, TouchableWithoutFeedback, Text, Image, Share
 } from 'react-native';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
@@ -34,8 +34,8 @@ class SearchResult extends Component {
 	}
 
 	_player( info ) {
-		if ( info.sound_urls.length > 0 ) {
-			const listener = RnPlayer.preparePlayer( info.sound_urls[ 0 ], ( data ) => {
+		if ( info.sound !== '' && typeof info.sound !== 'undefined' ) {
+			const listener = RnPlayer.preparePlayer( info.sound, ( data ) => {
 				this.setState( { loading: data.loading }, () => {
 					if ( !data.loading ) {
 						RnPlayer.play( ( ) => {
@@ -49,36 +49,21 @@ class SearchResult extends Component {
 	}
 
 	render() {
-		const { words } = this.props;
+		const { definition, searching, image } = this.props;
 		const { loading } = this.state;
+
 		return (
 			<LinearGradient colors={[ '#df2cf2', '#5718dc' ]} style={{ flex: 1 }}>
-				<View style={styles.container}>
+				<ScrollView style={styles.container}>
 					<Header />
-					{words.length > 0 ? (
-						<FlatList
-							extraData={this.state}
-							data={words}
-							renderItem={( { item } ) => {
-								const { image, info } = item;
-								return (
-									<Result
-										info={info}
-										image={image}
-										player={() => this._player( info )}
-										loading={loading}
-									/>
-								);
-							}}
-							keyExtractor={( item, index ) => index.toString()}
-						/>
-					) : (
-						<View style={styles.notFoundContainer}>
-							<Text style={styles.notFoundText}>No results found</Text>
-						</View>
-					)}
 
-
+					<Result
+						info={definition}
+						player={() => this._player( definition )}
+						loading={loading}
+						searching={searching}
+						image={image}
+					/>
 					<View style={styles.footer}>
 						<TouchableWithoutFeedback onPress={this._back}>
 							<View style={styles.backContainer}>
@@ -95,7 +80,7 @@ class SearchResult extends Component {
 						</TouchableWithoutFeedback>
 					</View>
 
-				</View>
+				</ScrollView>
 			</LinearGradient>
 		);
 	}
@@ -103,15 +88,17 @@ class SearchResult extends Component {
 
 SearchResult.defaultProps = {
 	componentId: '',
-	words: []
+	definition: {}
 };
 
 SearchResult.propTypes = {
 	componentId: PropTypes.any,
-	words: PropTypes.array
+	definition: PropTypes.any
 };
 
 const mapStateToProps = state => ( {
-	words: state.words.payload
+	definition: state.words.payload,
+	image: state.words.imageUrl,
+	searching: state.words.searching
 } );
 export default connect( mapStateToProps )( SearchResult );

@@ -8,7 +8,8 @@ export const goSearchResult = componentId => Navigation.push( componentId, {
 		name: 'SearchResult',
 		options: {
 			topBar: {
-				visible: false
+				visible: false,
+				height: 0
 			}
 		}
 	}

@@ -1,6 +1,18 @@
 import DictionaryModel from '../model';
 
 class DictionaryService {
+	static async getImage( w ) {
+		const {
+			success: successImage, data: Image
+		} = await DictionaryModel.getPublicImage( w );
+		if ( successImage ) {
+			if ( Image.items.length > 0 ) {
+				return Image.items[ 0 ];
+			}
+		}
+		return '';
+	}
+
 	static async getWordsInfo( words ) {
 	    let result = [];
 	    const wordsArray = words.split( ' ' );
