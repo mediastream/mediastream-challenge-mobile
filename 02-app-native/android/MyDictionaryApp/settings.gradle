@@ -1,1 +1,4 @@
-include ':app', ':dictionaryModule'
+include ':app'
+
+include ':dictionary'
+project(':dictionary').projectDir = new File(rootProject.projectDir,'../../../01-basic-module/android/dictionary')

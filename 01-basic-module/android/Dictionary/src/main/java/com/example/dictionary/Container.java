@@ -12,7 +12,7 @@ import android.widget.FrameLayout;
 
 
 public class Container extends FrameLayout {
-    Button dictionaryButton;
+    public Button dictionaryButton;
     public View dictionary;
     Context mContext;
     public EditText input;
@@ -47,7 +47,6 @@ public class Container extends FrameLayout {
         @Override
         public void onClick(View view) {
             try {
-                //getAll();
                 String txt = input.getText().toString();
                 if (!txt.isEmpty()) {
                     getData();

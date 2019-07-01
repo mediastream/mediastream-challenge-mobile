@@ -9,11 +9,11 @@
 
 
     <view
-        class="com.example.dictionary.Container"
+        class="mediatream.am.challenge.mydictionaryapp.DictionaryView"
         id="@+id/view"
-        android:id="@+id/dictionary"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:layout_editor_absoluteX="224dp"
-        tools:layout_editor_absoluteY="449dp" />
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="115dp" />
+
 </android.support.constraint.ConstraintLayout>

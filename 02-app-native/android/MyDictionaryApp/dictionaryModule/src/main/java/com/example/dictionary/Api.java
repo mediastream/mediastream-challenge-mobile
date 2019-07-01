@@ -24,7 +24,7 @@ public class Api {
     private static final String URI_DEF = "http://api.urbandictionary.com/v0/define?term=dog";
     public static JSONObject res;
 
-    public static void tes( Context context){
+    public static void getDefinition( Context context){
         RequestQueue rq = Volley.newRequestQueue(context);
 
         JsonObjectRequest objectRequest = new JsonObjectRequest(

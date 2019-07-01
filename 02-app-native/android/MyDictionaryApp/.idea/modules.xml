@@ -4,7 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/MyDictionaryApp.iml" filepath="$PROJECT_DIR$/MyDictionaryApp.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/dictionaryModule/dictionaryModule.iml" filepath="$PROJECT_DIR$/dictionaryModule/dictionaryModule.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../../01-basic-module/android/dictionary/dictionary.iml" filepath="$PROJECT_DIR$/../../../01-basic-module/android/dictionary/dictionary.iml" />
     </modules>
   </component>
 </project>
