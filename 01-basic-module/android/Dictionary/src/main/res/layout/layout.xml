@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@drawable/layout_draw"
+    android:windowSoftInputMode="adjustNothing"
+    >
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="@string/dictionary_title"
+        android:textSize="40sp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textColor="#fff"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        />
+
+    <EditText
+        android:id="@+id/inputId"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="150dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/input_draw"
+        android:textColor="#DE37F2"
+        android:hint="@string/input_placeholder"
+        android:imeOptions="actionDone"
+        android:singleLine="true"
+        />
+
+
+    <Button
+        android:id="@+id/buttonId"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/button_draw"
+        android:text="@string/button_Text"
+        android:textColor="#fff"
+        android:textSize="18sp"
+        android:textStyle="bold"
+
+        />
+
+</RelativeLayout>
